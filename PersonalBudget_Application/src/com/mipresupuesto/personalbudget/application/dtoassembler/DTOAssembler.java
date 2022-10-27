@@ -1,8 +1,8 @@
 package com.mipresupuesto.personalbudget.application.dtoassembler;
 
-public interface DTOAssembler <T, D> {
-	
-	D asembleDTO(T dto);
-	T asembleDomain(D domain);
+public interface DTOAssembler<T, D>{
 
+	D assembleDomain(T dto);
+	T assembleDTO(D domain);
+	
 }

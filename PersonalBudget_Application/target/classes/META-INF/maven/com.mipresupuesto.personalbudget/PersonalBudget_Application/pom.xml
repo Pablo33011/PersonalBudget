@@ -4,7 +4,7 @@
   <artifactId>PersonalBudget_Application</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>PersonalBudget_Application</name>
-  <description>Componente donde se encuentra alojado toda la lógica de negocio de la aplicacion Personal Budget</description>
+  <description>Componente donde esta alojada toda la logica del negocio de la aplicacion Personal Budget</description>
   <build>
     <sourceDirectory>src</sourceDirectory>
     <plugins>
@@ -20,30 +20,28 @@
   <dependencies>
   	<dependency>
   		<groupId>com.mipresupuesto.personalbudget</groupId>
- 		<artifactId>PersonalBudget_Crosscutting</artifactId>
- 		<version>0.0.1-SNAPSHOT</version>
- 	 </dependency>
- 	 
- 	 <dependency>
- 	 	<groupId>com.mipresupuesto.personalbudget</groupId>
+  		<artifactId>PersonalBudget_Domain</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>com.mipresupuesto.personalbudget</groupId>
   		<artifactId>PersonalBudget_Infrastructure</artifactId>
   		<version>0.0.1-SNAPSHOT</version>
- 	 </dependency>
- 	 
- 	 <dependency>
- 	 	<groupId>com.mipresupuesto.personalbudget</groupId>
-  		<artifactId>PersonalBudget_Domain</artifactId>
- 		<version>0.0.1-SNAPSHOT</version>
- 	 </dependency>
- 	 <dependency>
- 		 <groupId>com.mipresupuesto.personalbudget</groupId>
- 		 <artifactId>PersonalBudget_Dto</artifactId>
- 		<version>0.0.1-SNAPSHOT</version>
- 	 </dependency>
- 	 <dependency>
- 	 	<groupId>com.mipresupuesto.personalbudget</groupId>
+  	</dependency>
+  	<dependency>
+  		<groupId>com.mipresupuesto.personalbudget</groupId>
+  		<artifactId>PersonalBudget_CrossCutting</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>com.mipresupuesto.personalbudget</groupId>
+  		<artifactId>PersonalBudget_DTO</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>com.mipresupuesto.personalbudget</groupId>
   		<artifactId>PersonalBudget_Entity</artifactId>
- 		<version>0.0.1-SNAPSHOT</version>
- 	 </dependency>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
   </dependencies>
 </project>

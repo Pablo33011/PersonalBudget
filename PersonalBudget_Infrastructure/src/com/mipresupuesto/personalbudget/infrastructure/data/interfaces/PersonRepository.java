@@ -5,9 +5,10 @@ import java.util.UUID;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import entity.PersonEntity;
+import com.mipresupuesto.personalbudget.entity.PersonEntity;
 
+//Si no se coloca PAILA
 @Repository
-public interface PersonRepository extends JpaRepository<PersonEntity, UUID> {
+public interface PersonRepository extends JpaRepository<PersonEntity, UUID>{
 
 }

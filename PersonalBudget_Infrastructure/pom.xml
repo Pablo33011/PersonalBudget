@@ -3,8 +3,7 @@
 	<groupId>com.mipresupuesto.personalbudget</groupId>
 	<artifactId>PersonalBudget_Infrastructure</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>PersonalBudget_Infrastructure</name>
-	<description>Componente que posee la estrategia de acceso de datos, donde se encuentra toda la instrumentación necesaria para llevar a cabo una operacion de consulta o actualización de datos en una fuente de información determinada.</description>
+	<description>Componente que contiene los adaptadores o mecanismos  de acceso a fuentes externas como base de datos, servicios web, archivos y otros para la aplicacion Personal Budget</description>
 	<build>
 		<sourceDirectory>src</sourceDirectory>
 		<plugins>
@@ -20,7 +19,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>com.mipresupuesto.personalbudget</groupId>
-			<artifactId>PersonalBudget_Crosscutting</artifactId>
+			<artifactId>PersonalBudget_CrossCutting</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
@@ -28,12 +27,10 @@
 			<artifactId>PersonalBudget_Entity</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/com.microsoft.sqlserver/mssql-jdbc -->
 		<dependency>
 			<groupId>com.microsoft.sqlserver</groupId>
 			<artifactId>mssql-jdbc</artifactId>
 			<version>11.2.1.jre18</version>
 		</dependency>
-
 	</dependencies>
 </project>

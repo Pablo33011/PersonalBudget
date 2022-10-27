@@ -1,24 +1,28 @@
 package com.mipresupuesto.personalbudget.application.dtoassembler.implementation;
 
-import com.mipresupuesto.personalbudget.application.dtoassembler.DTOAssembler;
-import com.mipresupuesto.personalbudget.domain.YearDomain;
-import com.mipresupuesto.personalbudget.domain.builder.YearDomainBuilder;
-import com.mipresupuesto.personalbudget.dto.YearDTO;
+import org.springframework.stereotype.Component;
 
-public final class YearDTOAssembler implements DTOAssembler<YearDTO, YearDomain> {
+import com.mipresupuesto.personalbudget.application.dtoassembler.DTOAssembler;
+import com.mipresupuesto.personalbudget.domain.PersonDomain;
+import com.mipresupuesto.personalbudget.domain.YearDomain;
+import com.mipresupuesto.personalbudget.dto.YearDTO;
+import com.mipresupuesto.personalbudget.entity.YearEntity;
+
+public final class YearDTOAssembler implements DTOAssembler<YearDTO, YearDomain>{
 
 	@Override
-	public final YearDomain asembleDomain(final YearDTO dto) {
-		
-		YearDomain domain = YearDomainBuilder.get().build();
+	public YearDTO assembleDTO(YearDomain dto) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public YearDTO asembleDTO(YearDomain domain) {
-		// TODO Auto-generated method stub
-		return null;
+	public YearDomain assembleDomain(YearDTO dto) {
+		if (dto == null) {
+			// Throw exception
+		}
+		return YearDomain.create(dto.getId(),dto.getYear());
+		
 	}
 
 }

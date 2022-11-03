@@ -10,37 +10,43 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import com.mipresupuesto.personalbudget.crosscutting.utils.UtilUUID;
-import com.mipresupuesto.personalbudget.domain.BudgetDomain;
-import com.mipresupuesto.personalbudget.domain.PersonDomain;
-import com.mipresupuesto.personalbudget.domain.YearDomain;
 
 @Entity
-@Table(name = "Budget")
+@Table(name = "budget")
 public final class BudgetEntity {
 
 	@Id
 	@Column(name = "id")
 	private UUID id;
 	@ManyToOne
-	@JoinColumn(name = "idYear")
+	@JoinColumn(name = "idyear")
 	private YearEntity year;
 	@ManyToOne
-	@JoinColumn(name = "idPerson")
+	@JoinColumn(name = "idperson")
 	private PersonEntity person;
 
-	public static final BudgetEntity create(final UUID id, final YearEntity year, final PersonEntity person) {
-		return new BudgetEntity(id, year, person);
-	}
+
 
 	public BudgetEntity(UUID id, YearEntity year, PersonEntity person) {
+		super();
+		this.id = id;
+		this.year = year;
+		this.person = person;
+	}
+
+public BudgetEntity() {
+		super();
+	}
+
+/*	public BudgetEntity(UUID id, YearEntity year, PersonEntity person) {
+		super();
 		setId(UtilUUID.DEFAULT_UUID);
 		setYear(new YearEntity());
 		setPerson(new PersonEntity());
-	}
+	}*/
 
-	public BudgetEntity(final YearEntity year, final PersonEntity person) {
-		setYear(year);
-		setPerson(person);
+	public static final BudgetEntity create(final UUID id, final YearEntity year, final PersonEntity person) {
+		return new BudgetEntity(id, year, person);
 	}
 
 	public final YearEntity getYear() {

@@ -8,7 +8,6 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import com.mipresupuesto.personalbudget.crosscutting.utils.UtilUUID;
-import com.mipresupuesto.personalbudget.dto.YearDTO;
 
 @Entity
 @Table(name = "Year")

@@ -8,7 +8,6 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import com.mipresupuesto.personalbudget.crosscutting.utils.UtilUUID;
-import com.mipresupuesto.personalbudget.dto.PersonDTO;
 
 @Entity
 @Table(name = "Person")
@@ -36,9 +35,9 @@ public final class PersonEntity {
 		setFirstSurname("");
 		setSecondSurname("");
 	}
-	//Desactiva sonarlint esta vuelta cuidado
+	
 	@SuppressWarnings("all")
-	public PersonEntity(UUID id, String idCard, String firstName, String middleName, String firstSurname,
+	/*public PersonEntity(UUID id, String idCard, String firstName, String middleName, String firstSurname,
 			String secondSurname) {
 		setId(id);
 		setIdCard(idCard);
@@ -46,12 +45,23 @@ public final class PersonEntity {
 		setMiddleName(middleName);
 		setFirstSurname(firstSurname);
 		setSecondSurname(secondSurname);
-	}
+	}*/
+	
 	public static PersonEntity create(final UUID id, final String idCard, final String firstName, 
 			final String middleName, final String firstSurname, final String secondSurname) {
 		return new PersonEntity(id, idCard, firstName, middleName, firstSurname, secondSurname);
 	}
 
+	public PersonEntity(UUID id, String idCard, String firstName, String middleName, String firstSurname,
+			String secondSurname) {
+		super();
+		this.id = id;
+		this.idCard = idCard;
+		this.firstName = firstName;
+		this.middleName = middleName;
+		this.firstSurname = firstSurname;
+		this.secondSurname = secondSurname;
+	}
 	public static final PersonEntity create() {
 		return new PersonEntity();
 	}

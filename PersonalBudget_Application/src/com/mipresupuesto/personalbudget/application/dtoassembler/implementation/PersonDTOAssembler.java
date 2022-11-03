@@ -27,3 +27,4 @@ public final class PersonDTOAssembler implements DTOAssembler<PersonDTO, PersonD
 	}
 
 }
+
